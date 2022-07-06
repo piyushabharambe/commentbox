@@ -1,0 +1,20 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag sdpiyusha/mern_comment:latest
+    -name : push the docker image
+      run: docker login -u sdpiyusha -p ${{ secrets.DOCKER_TOKEN }} && docker push sdpiyusha/mern_comment:latest
