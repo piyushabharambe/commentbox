@@ -82,7 +82,7 @@ class Comment extends Component {
               />
               <input
                 type="text"
-                placeholder="Update your comment…"
+                placeholder="UpdateD your comment…"
                 style={style.commentFormText}
                 value={this.state.text}
                 onChange={this.handleTextChange}
