@@ -32,7 +32,7 @@ class CommentForm extends Component {
       <form style={style.commentForm} onSubmit={this.handleSubmit}>
         <input
           type="text"
-          placeholder="Your name…"
+          placeholder="Your names…"
           style={style.commentFormAuthor}
           value={this.state.author}
           onChange={this.handleAuthorChange}
